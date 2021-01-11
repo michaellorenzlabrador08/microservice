@@ -10,6 +10,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 public class DbServiceApplication {
 
     public static void main(String[] args) {
+        System.out.println("Hello World!");
         SpringApplication.run(DbServiceApplication.class, args);
     }
 
