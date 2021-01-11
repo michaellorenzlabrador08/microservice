@@ -1,0 +1,29 @@
+server:
+  port: 8069
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/employee_profile?serverTimezone=UTC
+    username: root
+    password: mikeemon123
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  application:
+    name: employee-service
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8089/eureka
+  instance:
+    hostname: localhost
+  server:
+    waitTimeInMsWhenSyncEmpty: 0    #wait time for subsequent sync
+
+
+
+
